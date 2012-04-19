@@ -1,1 +1,0 @@
-SCRIPT_ID = "script.video.etvnet"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Login">
+		<setting id="username" type="text" label="2000" default="" />
+		<setting id="password" type="text" option="hidden" label="2001" enable="!eq(-1,)" default="" />
+		<setting type="lsep" label="You can create an account at grooveshark.com if"/>
+		<setting type="lsep" label="you don't already have one. By doing so you will"/>
+		<setting type="lsep" label="be able to use playlists."/>
+	</category>
+	<category label="Playback">
+		<setting id="xbox" type="bool" label="2003" default="false" visible="false"/>
+		<setting id="xbox_shuffle" type="bool" label="2004" default="false" visible="eq(-1,true)"/>
+		<setting id="cover_now_playing" type="bool" label="Cover art for playing song" default="true" visible="eq(-2,true)"/>
+		<setting id="player_core" type="labelenum" label="Player core" default="Auto" values="Auto|MPlayer|DVDPlayer|PAPlayer"/>
+		<setting type="lsep" label="If some songs do not play try changing"/>
+		<setting type="lsep" label="the player core."/>
+	</category>
+	<category label="Debug">
+		<setting id="debug" type="bool" label="2002" default="true" />
+	</category>
+</settings>

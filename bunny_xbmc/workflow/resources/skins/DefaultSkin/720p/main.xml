@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<window type="window" id="14000">
+		<defaultcontrol always="true">9001</defaultcontrol>
+		<allowoverlay>no</allowoverlay>
+		<onload lang="python"></onload>
+		<controls>
+				<control type="image">
+						<width>86</width>
+						<height>20</height>
+					    <posx>30</posx>
+					    <posy>25</posy>
+						<visible>true</visible>
+						<texture>bunny.jpg</texture>
+				</control>
+				<control type="label" id="9090">
+						<posy>25</posy>
+						<posx>230</posx>
+						<font>font22</font>
+						<label></label>
+						<width>780</width>
+						<height>40</height>
+                        <info>Edit file resources/DefaultSkin/720p/main.xml to chage this page!</info>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+				</control>
+		</controls>
+</window>
