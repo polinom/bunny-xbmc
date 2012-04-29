@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.{{type}}.{{name}}"
-       name="{{name}}"
+<addon id="script.{type}.{name}"
+       name="{name}"
        version="0.0.1"
-       provider-name="Solver">
+       provider-name="Bunny-XBMC">
   <requires>
     <import addon="xbmc.python" version="1.0"/>
     <import addon="script.module.simplejson" version="2.0.10"/>
@@ -10,7 +10,7 @@
   </requires>
   <extension point="xbmc.python.script"
             library="default.py">
-    <provides>{{type}}</provides>
+    <provides>{type}</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>

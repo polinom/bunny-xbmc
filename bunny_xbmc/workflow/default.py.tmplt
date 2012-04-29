@@ -7,24 +7,8 @@ import traceback
 import threading
 from datetime import datetime
 
-class tools(object):
-	def loadParameters(self, params):
-		self.cmds = {}
-		splitCmds = params[params.find('?')+1:].split('&')    
-		for cmd in splitCmds:
-			if (len(cmd) > 0):
-				splitCmd = cmd.split('=')
-				name = splitCmd[0]
-				value = splitCmd[1]
-				self.cmds[name] = value
 
-	def getCmd(self, cmd):
-		if cmd in self.cmds:
-			return self.cmds[cmd]
-		else:
-			return None
-
-__scriptid__ = "script.video.etvnet"
+__scriptid__ = "script.{type}.{name}"
 __scriptname__ = "eTVnet"
 __author__ = "POLINIOM"
 __url__ = "http://etvnet.com/"
@@ -62,6 +46,6 @@ sys.path.append(BASE_RESOURCE_PATH)
 
 from etvnet.client import eTVxbmc
 
-wn = eTVxbmc("main.xml", __cwd__, "DefaultSkin", isXbox = __isXbox__)
+wn = xbmcgui.WindowXML("main.xml", __cwd__, "DefaultSkin", isXbox = __isXbox__)
 wn.doModal()
 del wn
