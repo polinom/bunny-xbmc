@@ -5,8 +5,6 @@
 		<onload lang="python"></onload>
 		<controls>
 				<control type="image">
-						<width>86</width>
-						<height>20</height>
 					    <posx>30</posx>
 					    <posy>25</posy>
 						<visible>true</visible>

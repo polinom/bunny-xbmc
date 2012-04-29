@@ -44,7 +44,6 @@ print BASE_RESOURCE_PATH
 
 sys.path.append(BASE_RESOURCE_PATH)
 
-from etvnet.client import eTVxbmc
 
 wn = xbmcgui.WindowXML("main.xml", __cwd__, "DefaultSkin", isXbox = __isXbox__)
 wn.doModal()
