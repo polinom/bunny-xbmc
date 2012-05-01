@@ -10,12 +10,8 @@ from datetime import datetime
 
 __scriptid__ = "script.{type}.{name}"
 __scriptname__ = "eTVnet"
-__author__ = "POLINIOM"
-__url__ = "http://etvnet.com/"
-__svn_url__ = ""
-__credits__ = ""
-__XBMC_Revision__ = "31000"
-
+__author__ = "Undefined"
+__url__ = "http://localhost/"
 
 
 import xbmcaddon
@@ -40,7 +36,6 @@ else:
 	__debugging__ = False
 	print 'GrooveShark: Debugging disabled'
 
-print BASE_RESOURCE_PATH
 
 sys.path.append(BASE_RESOURCE_PATH)
 

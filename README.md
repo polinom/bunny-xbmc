@@ -26,3 +26,8 @@ To create you very basic application you need make few steps:
 
   * That's it! Now you can got to xbmc and check it out in you video addons. The app vil ne named 'fancyapp'
 
+
+To Read
+-------
+Graphic design for TV screens:
+  https://developers.google.com/tv/android/docs/gtv_android_patterns
