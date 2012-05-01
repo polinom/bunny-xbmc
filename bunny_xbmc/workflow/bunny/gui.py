@@ -2,16 +2,19 @@
 import xbmcgui
 import xbmcaddon
 import xbmc
-from bunny.utils import notify
-from threading import Thread
 from thread import start_new_thread
 from framework.settings import SCRIPT_ID
+
+
+__cwd__ = xbmcaddon.Addon(id=SCRIPT_ID).getAddonInfo('path')
+__skinsdir__ = "DefaultSkin"
 
 
 def in_thread(func):
     def threaded_func(*args,**kwargs):
         t_id = start_new_thread(func, args, kwargs)
     return threaded_func
+
 
 
 class Settings(object):
@@ -32,7 +35,7 @@ class Settings(object):
 
 
 
-class XMLWindowMetaclass(type):
+class WindowMetaclass(type):
     def __new__(metacls, name, bases, dct):
 
         if len(bases):
@@ -90,6 +93,7 @@ class Manager(object):
 
 
 
+
 class Progress(object):
     def __init__(self):
         self.progress = xbmcgui.DialogProgress()
@@ -101,7 +105,6 @@ class Progress(object):
 
     def hide(self):
         self.progress.close()
-
 
 
 def with_progress(func):
@@ -116,9 +119,11 @@ def with_progress(func):
     return with_progress_func
 
 
-class XMLWindow(xbmcgui.WindowXML):
+
+class Window(xbmcgui.WindowXML):
 
     xml = None
+
 
     # extra methods you can define to react on actions
     action_callbacks = {10: 'onExit',
@@ -127,9 +132,18 @@ class XMLWindow(xbmcgui.WindowXML):
 
     config = Settings()
 
+
+    def __new__(cls, *args,**kwargs):
+        args = list(args)
+        args.insert(0, cls.xml)
+        args.insert(1, __cwd__)
+        args.insert(2,__skinsdir__)
+        return xbmcgui.WindowXML.__new__(cls, *args,**kwargs)
+
+
     def __init__(self,*args,**kwargs):
 
-        super(XMLWindow,self).__init__(*args,**kwargs)
+        super(Window,self).__init__(*args,**kwargs)
 
         self.progress = Progress()
 
@@ -140,7 +154,7 @@ class XMLWindow(xbmcgui.WindowXML):
         self.manager = Manager(self)
 
 
-    __metaclass__ = XMLWindowMetaclass
+    __metaclass__ = WindowMetaclass
 
 
     def onFocus(self, controlID):
@@ -167,11 +181,8 @@ class XMLWindow(xbmcgui.WindowXML):
             if callback is not None:
                 callback()
         # define low level on action behavior
-        return super(XMLWindow,self).onAction(action)
+        return super(Window,self).onAction(action)
 
-
-    def notify(self, message, header="Message"):
-        xbmc.executebuiltin("XBMC.Notification(%s,%s)" % (header,message))
 
    
 def onclick(*controlIDs):
@@ -196,7 +207,6 @@ def onfocus(*controlIDs):
             setattr(func, "_callback_to_focus_on", list(controlIDs))
         return func
     return real_decorator
-
 
 
 

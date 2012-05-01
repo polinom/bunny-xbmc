@@ -1,10 +1,7 @@
 import os
 import sys
-import xbmcplugin
 import xbmc
 import xbmcgui
-import traceback
-import threading
 from datetime import datetime
 
 
@@ -18,28 +15,14 @@ import xbmcaddon
 __settings__ = xbmcaddon.Addon(id=__scriptid__)
 __language__ = __settings__.getLocalizedString
 __debugging__ = __settings__.getSetting("debug")
-__isXbox__ = False
 __version__ = __settings__.getAddonInfo('version')
 BASE_RESOURCE_PATH = xbmc.translatePath(os.path.join(__settings__.getAddonInfo('path'), 'resources', 'lib' ))
-__cwd__ = __settings__.getAddonInfo('path')
 
-
-if __isXbox__ == True:
-	__settings__.setSetting("xbox", "true")
-else:
-	__settings__.setSetting("xbox", "false")
-
-if __debugging__ == 'true':
-	__debugging__ = True
-	print 'GrooveShark: Debugging enabled'
-else:
-	__debugging__ = False
-	print 'GrooveShark: Debugging disabled'
 
 
 sys.path.append(BASE_RESOURCE_PATH)
 
 
-wn = xbmcgui.WindowXML("main.xml", __cwd__, "DefaultSkin", isXbox = __isXbox__)
+wn = bunny.Window()
 wn.doModal()
 del wn

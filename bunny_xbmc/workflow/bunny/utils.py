@@ -10,7 +10,6 @@ except:
 from etvnet.define import *
 
 
-
 # in order to use this cache_responce decorator 
 # 'self' suppose to have 'Cache' object in '_cache' attribute
 def cache_responce(request_method):
