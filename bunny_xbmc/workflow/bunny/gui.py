@@ -1,8 +1,35 @@
+
 import xbmcgui
 import xbmcaddon
 import xbmc
-
+from bunny.utils import notify
+from threading import Thread
+from thread import start_new_thread
 from framework.settings import SCRIPT_ID
+
+
+def in_thread(func):
+    def threaded_func(*args,**kwargs):
+        t_id = start_new_thread(func, args, kwargs)
+    return threaded_func
+
+
+class Settings(object):
+    def __init__(self):
+        self.settings = xbmcaddon.Addon(SCRIPT_ID)
+
+    def GetValue(self, key):
+        val = self.settings.getSetting(key)
+        if val and 'none' not in val:
+            return val
+        return None
+
+    def SetValue(self, key, value):
+        self.settings.setSetting(key, value)
+
+    def Reset(self, key):
+        self.settings.setSetting(key, 'none')
+
 
 
 class XMLWindowMetaclass(type):
@@ -45,6 +72,7 @@ class XMLWindowMetaclass(type):
         dct["callback_focus_stack"] = callback_focus_stack
         return type.__new__(metacls, name, bases, dct)
 
+
 class Manager(object):
 
     def __init__(self, window):
@@ -62,7 +90,6 @@ class Manager(object):
 
 
 
-
 class Progress(object):
     def __init__(self):
         self.progress = xbmcgui.DialogProgress()
@@ -76,35 +103,41 @@ class Progress(object):
         self.progress.close()
 
 
+
 def with_progress(func):
     def with_progress_func(self, *args, **kwargs):
-        progress = Progress()
-        progress.show(message="Loading")
-        resp = func(self, *args, **kwargs)
-        progress.hide()
+        xbmc.executebuiltin( "ActivateWindow(busydialog)" )
+        try:
+            resp = func(self, *args, **kwargs)
+        finally:
+            xbmc.executebuiltin( "Dialog.Close(busydialog)" ) 
+            resp = None
         return resp
     return with_progress_func
 
 
 class XMLWindow(xbmcgui.WindowXML):
 
+    xml = None
 
     # extra methods you can define to react on actions
     action_callbacks = {10: 'onExit',
                         0: 'onCtrl'
                        }
 
+    config = Settings()
+
     def __init__(self,*args,**kwargs):
+
         super(XMLWindow,self).__init__(*args,**kwargs)
 
+        self.progress = Progress()
 
         self.params = None
         if kwargs.get('params'):
             self.params = kwargs['params']
  
         self.manager = Manager(self)
-
-        self.config = xbmcaddon.Addon(id=SCRIPT_ID)
 
 
     __metaclass__ = XMLWindowMetaclass
@@ -121,6 +154,8 @@ class XMLWindow(xbmcgui.WindowXML):
         callbacks_list = self.callback_click_stack.get(controlID)
         if callbacks_list is not None:
             for callback in callbacks_list:
+                # thread = CallbackThread(callback,self)
+                # thread.start()
                 callback(self)
 
 
@@ -161,8 +196,6 @@ def onfocus(*controlIDs):
             setattr(func, "_callback_to_focus_on", list(controlIDs))
         return func
     return real_decorator
-
-
 
 
 
