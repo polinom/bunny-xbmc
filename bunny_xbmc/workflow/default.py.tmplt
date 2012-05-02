@@ -1,28 +1,7 @@
-import os
-import sys
-import xbmc
-import xbmcgui
-from datetime import datetime
-
-
+from appname.window import MainWindow
 __scriptid__ = "script.{type}.{name}"
-__scriptname__ = "eTVnet"
-__author__ = "Undefined"
-__url__ = "http://localhost/"
 
 
-import xbmcaddon
-__settings__ = xbmcaddon.Addon(id=__scriptid__)
-__language__ = __settings__.getLocalizedString
-__debugging__ = __settings__.getSetting("debug")
-__version__ = __settings__.getAddonInfo('version')
-BASE_RESOURCE_PATH = xbmc.translatePath(os.path.join(__settings__.getAddonInfo('path'), 'resources', 'lib' ))
-
-
-
-sys.path.append(BASE_RESOURCE_PATH)
-
-
-wn = bunny.Window()
+wn = MainWindow()
 wn.doModal()
 del wn

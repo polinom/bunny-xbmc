@@ -5,19 +5,28 @@
 		<onload lang="python"></onload>
 		<controls>
 				<control type="image">
-					    <posx>30</posx>
-					    <posy>25</posy>
+					    <posx>430</posx>
+					    <posy>125</posy>
 						<visible>true</visible>
 						<texture>bunny.jpg</texture>
 				</control>
 				<control type="label" id="9090">
 						<posy>25</posy>
-						<posx>230</posx>
-						<font>font22</font>
-						<label></label>
-						<width>780</width>
+						<posx>220</posx>
+						<font>font30</font>
+						<label>Here we go! You very basic application is up and running.</label>
+						<width>880</width>
 						<height>40</height>
-                        <info>Edit file resources/DefaultSkin/720p/main.xml to chage this page!</info>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+				</control>
+				<control type="label" id="9091">
+						<posy>550</posy>
+						<posx>180</posx>
+						<font>font14</font>
+						<label>To change this page go to resources/skins/DefaultSkin/720/main.xml and edit xml file!</label>
+						<width>1080</width>
+						<height>40</height>
 						<textcolor>white</textcolor>
 						<selectedcolor>white</selectedcolor>
 				</control>

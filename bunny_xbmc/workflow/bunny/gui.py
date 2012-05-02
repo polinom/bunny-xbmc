@@ -1,9 +1,8 @@
-
 import xbmcgui
 import xbmcaddon
 import xbmc
 from thread import start_new_thread
-from framework.settings import SCRIPT_ID
+from appname.settings import SCRIPT_ID
 
 
 __cwd__ = xbmcaddon.Addon(id=SCRIPT_ID).getAddonInfo('path')

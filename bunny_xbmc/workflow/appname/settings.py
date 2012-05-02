@@ -1,0 +1,1 @@
+SCRIPT_ID = 'scriot.video.myapp'
