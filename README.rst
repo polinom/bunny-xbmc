@@ -34,4 +34,4 @@ Graphic design for TV screens:
 
 Who using it
 ------------
-etvnet.com - Russian Online video streeming service.
+http://etvnet.com - Russian Online video streeming service.
