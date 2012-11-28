@@ -31,7 +31,7 @@ To create you very basic application you need make few steps:
 
     For example: `bynny-create video fancyapp`
 
-  * That's it! Now you can got to xbmc and check it out in you video addons. The app vil ne named 'fancyapp'
+  * That's it! Now you can got to xbmc and check it out in you video addons. The app will be named 'fancyapp'
 
 
 To Read
