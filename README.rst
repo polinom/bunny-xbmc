@@ -16,7 +16,7 @@ Instalation
 -----------
 For now it is one reliable way to install it. I dont want to move it to PiPy index till it ready.
 
-`pip install https://github.com/polinom/bunny-xbmc/archive/master.zip`
+``pip install https://github.com/polinom/bunny-xbmc/archive/master.zip``
 
 
 
