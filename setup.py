@@ -4,7 +4,7 @@ requires = []
 
 setup(
     name = "bunny_xbmc",
-    description='eTV censore processor',
+    description='Framework to develop fancy xbmc apps fast.',
     version = "0.1",
     author = "Polynets Igor",
     packages=['bunny_xbmc'],
