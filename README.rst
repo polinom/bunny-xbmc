@@ -12,6 +12,14 @@ TODO:
   3. Utils to resolve trivial xbmc script development tasks.
   4. Documentation.
 
+Instalation
+-----------
+For now it is one reliable way to install it. I dont want to move it to PiPy index till it ready.
+
+`pip install https://github.com/polinom/bunny-xbmc/archive/master.zip`
+
+
+
 Fast Start
 ----------
 To create you very basic application you need make few steps:
