@@ -12,8 +12,8 @@ TODO:
   3. Utils to resolve trivial xbmc script development tasks.
   4. Documentation.
 
-Instalation
------------
+Installation
+------------
 
 ``pip install https://github.com/polinom/bunny-xbmc/archive/master.zip``
 
