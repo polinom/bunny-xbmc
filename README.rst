@@ -27,7 +27,7 @@ To create you very basic application you need make few steps:
 
      For example on Mac you would go to ``Library/Application Support/XBMC/addons``
 
-  * Then preform  bunny-create [type] [appname]
+  * Then preform  ``bunny-create [type] [appname]``
 
     For example: ``bynny-create video fancyapp``
 
