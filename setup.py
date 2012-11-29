@@ -5,7 +5,21 @@ import glob
 requires = []
 
 datadir = os.path.join('bunny_xbmc','workflow')
-datafiles = [(datadir, [f for f in glob.glob(os.path.join(datadir, '*'))])]
+
+
+
+def get_datafiles(datadir):
+    file_list = []
+    for f in glob.glob(os.path.join(datadir, '*')
+        if not os.path.isdir(f):
+            file_list.append(f)
+    return (datadir, file_list)
+
+
+
+datafiles = [get_datafiles(datadir)]
+
+
 print datafiles
 
 setup(
