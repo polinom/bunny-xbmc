@@ -14,7 +14,7 @@ def get_datafiles(datadir):
         if not os.path.isdir(f):
             file_list.append(f)
         else:
-            yield (f, get_datafiles(f))
+            yield (f, list(get_datafiles(f)))
     yield (datadir, file_list)
 
 
