@@ -9,17 +9,29 @@ datadir = os.path.join('bunny_xbmc','workflow')
 
 
 def get_datafiles(datadir):
-    file_list = []
-    for f in glob.glob(os.path.join(datadir, "*")):
-        if not os.path.isdir(f):
-            file_list.append(f)
-        else:
-            yield (f, list(get_datafiles(f)))
-    yield (datadir, file_list)
+    datadirs = [datadir]
+    result = []
+    def pars_folder(datadir):
+        file_list = []
+        folders = []
+        for f in glob.glob(os.path.join(datadir, "*")):
+            if not os.path.isdir(f):
+                file_list.append(f)
+            else:
+                folders.append(f)
+            return file_list, folders
+
+    while datadirs.len():
+        for dr in datadirs
+            file_list, dirs = pars_folder(datadirs)
+            result.append((dr, filelist))
+            datadirs.extend()
+
+    return result
 
 
 
-datafiles = list(get_datafiles(datadir))
+datafiles = get_datafiles(datadir)
 
 
 print datafiles

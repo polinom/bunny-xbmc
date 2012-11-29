@@ -7,7 +7,7 @@ Bunny-XBMC documentation!
 =========================
 
 
-.. DANGER::
+.. Warning::
    WORK IN PROGRESS!
 
 
