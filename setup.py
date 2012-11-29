@@ -19,7 +19,7 @@ def get_datafiles(datadir):
 
 
 
-datafiles = [get_datafiles(datadir)]
+datafiles = list(get_datafiles(datadir))
 
 
 print datafiles
