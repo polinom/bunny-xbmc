@@ -91,8 +91,8 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-sys.path.append(os.path.abspath('_themes2'))
-html_theme_path = ['_themes2']
+sys.path.append(os.path.abspath('_themes3'))
+html_theme_path = ['_themes3']
 html_theme = 'kr'
 
 
@@ -243,3 +243,6 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+
+html_context = {'google_analytics_id': 'FuckenId'}

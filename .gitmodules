@@ -4,3 +4,6 @@
 [submodule "docs/source/_themes2"]
 	path = docs/source/_themes2
 	url = https://github.com/kennethreitz/kr-sphinx-themes.git
+[submodule "docs/source/_themes3"]
+	path = docs/source/_themes3
+	url = git@github.com:polinom/kr-sphinx-themes.git
