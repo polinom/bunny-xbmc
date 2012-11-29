@@ -1,4 +1,4 @@
-bunny (='.'=) xbmc
+Bunny (='.'=) XBMC
 ==================
 
 Framework to develop fancy xbmc apps fast.
