@@ -1,6 +1,10 @@
 from setuptools import setup, find_packages
+import os
 
 requires = []
+
+datadir = os.path.join('bunny_xbmc','workflow')
+datafiles = [(datadir, [f for f in glob.glob(os.path.join(datadir, '*'))])]
 
 setup(
     name = "bunny_xbmc",
@@ -15,4 +19,5 @@ setup(
     },
     package_data={'bunny_xbmc': ['workflow/appname/*', 'workflow/bunny/*', 'workflow/resources/*', 'workflow/*']},
     include_package_data=True,
+    data_files = datafiles,
   )
