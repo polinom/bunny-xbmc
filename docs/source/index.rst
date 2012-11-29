@@ -32,6 +32,7 @@ Contents:
    :glob:
    
    install
+   firstapp
    hello_world
    tutorial
    window
