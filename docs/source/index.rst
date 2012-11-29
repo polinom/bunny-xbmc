@@ -3,8 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to bunny-xbmc's documentation!
-======================================
+Bunny-XBMC documentation!
+=========================
+
+
+.. DANGER::
+   WORK IN PROGRESS!
 
 
 Introduction
@@ -20,10 +24,9 @@ Becouse there is no standart in this area. But XBMC is pretty nice media center.
 And it would be very nice if people could take full advantage of it.
 
 
-Goals
------
-To make easy to use and documented framework for XBMC script (applications) development.
-
+Goal
+----
+Nowaday TV devices industry is extremly developing. And XBMC is a leader in opensource arena. However there is no good documentation how to build apps for XBMC. This project aims to fill this ampty space.
 
 Contents:
 ---------
@@ -47,6 +50,12 @@ Who Is Using It
 
 etvnet.com - Russian Video streamig company. Example: http://youtu.be/rjLUBfaMKls
 
+
+How It Can Look
+---------------
+
+.. image:: _static/17.jpg
+    :width: 700 px
 
 
 *Indices and tables*
