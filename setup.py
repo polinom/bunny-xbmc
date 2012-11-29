@@ -17,7 +17,6 @@ setup(
             'bunny_create = bunny_xbmc.__init__:main',
         ],
     },
-    package_data={'bunny_xbmc': ['workflow/appname/*', 'workflow/bunny/*', 'workflow/resources/*', 'workflow/*']},
     include_package_data=True,
     data_files = datafiles,
   )
