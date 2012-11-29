@@ -6,7 +6,7 @@ requires = []
 
 datadir = os.path.join('bunny_xbmc','workflow')
 
-
+datafiles = [(root, [os.path.join(root, f) for f in files) for root, dirs, files in os.walk(datadir)]
 
 def get_datafiles(datadir):
     datadirs = [datadir]
