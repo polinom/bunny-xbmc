@@ -245,4 +245,4 @@ texinfo_documents = [
 #texinfo_show_urls = 'footnote'
 
 
-html_context = {'google_analytics_id': 'FuckenId'}
+html_context = {'google_analytics_id': 'UA-36687760-1'}
