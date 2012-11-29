@@ -10,7 +10,7 @@ datadir = os.path.join('bunny_xbmc','workflow')
 
 def get_datafiles(datadir):
     file_list = []
-    for f in glob.glob(os.path.join(datadir, '*'):
+    for f in glob.glob(os.path.join(datadir, "*")):
         if not os.path.isdir(f):
             file_list.append(f)
     return (datadir, file_list)
