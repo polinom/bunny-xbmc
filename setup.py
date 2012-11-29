@@ -13,7 +13,9 @@ def get_datafiles(datadir):
     for f in glob.glob(os.path.join(datadir, "*")):
         if not os.path.isdir(f):
             file_list.append(f)
-    return (datadir, file_list)
+        else:
+            yield (f, get_datafiles(f))
+    yield (datadir, file_list)
 
 
 
