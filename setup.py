@@ -6,6 +6,7 @@ requires = []
 
 datadir = os.path.join('bunny_xbmc','workflow')
 datafiles = [(datadir, [f for f in glob.glob(os.path.join(datadir, '*'))])]
+print datafiles
 
 setup(
     name = "bunny_xbmc",
