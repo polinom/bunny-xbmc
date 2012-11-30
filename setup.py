@@ -21,6 +21,11 @@ setup(
     },
     include_package_data=True,
     zip_safe=False,
-    package_data = {'': ['*.tmplt', '*.xml', '*.jpg'] },
+    package_data = {
+               'workflow/': ['*.tmplt'],
+               'workflow/resources': ['*.xml'],
+               'workflow/resources/skins/DefaultSkin/720p': ['*.xml'],
+               'workflow/resources/skins/DefaultSkin/media': ['*.jpg'],
+               },
     #data_files = datafiles,
   )
