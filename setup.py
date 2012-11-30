@@ -21,5 +21,6 @@ setup(
     },
     include_package_data=True,
     zip_safe=False,
+    package_data = {'': ['*.tmplt', '*.xml', '*.jpg'] },
     #data_files = datafiles,
   )
