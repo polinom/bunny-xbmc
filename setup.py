@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
 import os
 import glob
 
@@ -13,7 +13,7 @@ setup(
     description='Framework to develop fancy xbmc apps fast.',
     version = "0.1",
     author = "Polynets Igor",
-    packages=find_packages(),
+    packages=['bunny_xbmc'],
     entry_points={
         'console_scripts': [
             'bunny_create = bunny_xbmc.__init__:main',
