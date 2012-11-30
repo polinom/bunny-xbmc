@@ -13,12 +13,12 @@ setup(
     description='Framework to develop fancy xbmc apps fast.',
     version = "0.1",
     author = "Polynets Igor",
-    packages=['bunny_xbmc'],
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
             'bunny_create = bunny_xbmc.__init__:main',
         ],
     },
     include_package_data=True,
-    data_files = datafiles,
+    #data_files = datafiles,
   )
