@@ -15,7 +15,7 @@ TODO:
 Installation
 ------------
 
-``pip install https://github.com/polinom/bunny-xbmc/archive/master.zip``
+``pip install git+git://github.com/polinom/bunny-xbmc.git``
 
 
 
