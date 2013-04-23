@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
 import os
 import glob
 
@@ -21,5 +21,12 @@ setup(
         ],
     },
     include_package_data=True,
-    data_files=datafiles,
+    zip_safe=False,
+    package_data = {
+               'workflow/': ['*.tmplt'],
+               'workflow/resources': ['*.xml'],
+               'workflow/resources/skins/DefaultSkin/720p': ['*.xml'],
+               'workflow/resources/skins/DefaultSkin/media': ['*.jpg'],
+               },
+    data_files = datafiles
   )

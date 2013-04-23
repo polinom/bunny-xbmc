@@ -9,13 +9,14 @@ TODO:
 =====
   1. Application scaffolding.
   2. Base windows class with easy event binding.
-  3. Utils to resolve trivial xbmc script development tasks.
-  4. Documentation.
+  3. Scaffolding of xml windows representatoins base on registered windows classes.
+  4. Utils to resolve trivial xbmc script development tasks.
+  5. Documentation.
 
 Installation
 ------------
 
-``pip install https://github.com/polinom/bunny-xbmc/archive/master.zip``
+``pip install git+git://github.com/polinom/bunny-xbmc.git``
 
 
 
@@ -33,6 +34,10 @@ To create you very basic application you need make few steps:
 
   * That's it! Now you can got to xbmc and check it out in you video addons. The app will be named 'fancyapp'
 
+Documentation (in progress)
+-------------
+
+https://bunny-xbmc.readthedocs.org/en/latest/
 
 To Read
 -------
