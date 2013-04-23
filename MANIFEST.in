@@ -1,0 +1,6 @@
+include *.rst
+recursive-include bunny_xbmc/workflow *.tmplt
+recursive-include bunny_xbmc *.jpg
+recursive-include bunny_xbmc *.py
+recursive-include bunny_xbmc *.xml
+recursive-include docs Makefile
